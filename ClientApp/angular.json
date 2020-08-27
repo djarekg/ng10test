@@ -11,24 +11,24 @@
         }
       },
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "apps/ng10test/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/ng10test",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "index": "apps/ng10test/src/index.html",
+            "main": "apps/ng10test/src/main.ts",
+            "polyfills": "apps/ng10test/src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "apps/ng10test/src/favicon.ico",
+              "apps/ng10test/src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "apps/ng10test/src/styles.scss"
             ],
             "scripts": []
           },
@@ -36,8 +36,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "apps/ng10test/src/environments/environment.ts",
+                  "with": "apps/ng10test/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -83,16 +83,16 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
+            "main": "apps/ng10test/src/test.ts",
+            "polyfills": "apps/ng10test/src/polyfills.ts",
+            "tsConfig": "apps/ng10test/tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "apps/ng10test/src/favicon.ico",
+              "apps/ng10test/src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "apps/ng10test/src/styles.scss"
             ],
             "scripts": []
           }
@@ -101,8 +101,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
+              "apps/ng10test/tsconfig.app.json",
+              "apps/ng10test/tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
             "exclude": [
