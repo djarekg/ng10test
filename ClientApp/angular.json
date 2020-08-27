@@ -10,7 +10,7 @@
           "style": "scss"
         }
       },
-      "root": "",
+      "root": "apps/ng10test",
       "sourceRoot": "apps/ng10test/src",
       "prefix": "app",
       "architect": {
@@ -21,7 +21,7 @@
             "index": "apps/ng10test/src/index.html",
             "main": "apps/ng10test/src/main.ts",
             "polyfills": "apps/ng10test/src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "apps/ng10test/tsconfig.app.json",
             "aot": true,
             "assets": [
               "apps/ng10test/src/favicon.ico",
@@ -86,7 +86,7 @@
             "main": "apps/ng10test/src/test.ts",
             "polyfills": "apps/ng10test/src/polyfills.ts",
             "tsConfig": "apps/ng10test/tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
+            "karmaConfig": "apps/ng10test/karma.conf.js",
             "assets": [
               "apps/ng10test/src/favicon.ico",
               "apps/ng10test/src/assets"
@@ -103,7 +103,7 @@
             "tsConfig": [
               "apps/ng10test/tsconfig.app.json",
               "apps/ng10test/tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "apps/ng10test/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -113,7 +113,7 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
+            "protractorConfig": "apps/ng10test/e2e/protractor.conf.js",
             "devServerTarget": "ng10test:serve"
           },
           "configurations": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng10test"
+    }
+  },
+  "defaultProject": "ng10test",
+  "cli": {
+    "analytics": false
+  }
 }
