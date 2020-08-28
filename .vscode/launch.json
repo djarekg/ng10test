@@ -4,6 +4,28 @@
    // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
    "version": "0.2.0",
    "configurations": [
+       {
+           "name": "Launch Chrome",
+           "request": "launch",
+           "type": "pwa-chrome",
+           "url": "http://localhost:8080/ng10test",
+           "webRoot": "${workspaceFolder}/ClientApp/apps/ng10test"
+       },
+       {
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "ASPNETCORE_ENVIRONMENT": "Development",
+          "ASPNETCORE_URLS": "http://localhost:8080"
+        },
+        "internalConsoleOptions": "openOnSessionStart",
+        "name": "aspnetcore",
+        "preLaunchTask": "build",
+        "program": "${workspaceRoot}/bin/Debug/netcoreapp3.1/ng10test.dll",
+        "request": "launch",
+        "stopAtEntry": false,
+        "type": "coreclr"
+      },
         {
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
@@ -31,6 +53,21 @@
             "type": "coreclr",
             "request": "attach",
             "processId": "${command:pickProcess}"
-        }
+        }//,
+        // {
+        //     "name": "ng10test: chrome",
+        //     "request": "launch",
+        //     "type": "chrome",
+        //     "url": "http://localhost:4067/ng10test",
+        //     "webRoot": "${workspaceRoot}/ClientApp/apps/ng10test",
+        //     "sourceMapPathOverrides": {
+        //       "webpack:/*": "${webRoot}/*",
+        //       "/./*": "${webRoot}/*",
+        //       "/src/*": "${webRoot}/*",
+        //       "/*": "*",
+        //       "/./~/*": "${webRoot}/node_modules/*"
+        //     },
+        //     "skipFiles": ["${webRoot}/node_modules/**/*.js", "<node_internals>/**/*.js", "**/*.js"]
+        //   },
     ]
 }
